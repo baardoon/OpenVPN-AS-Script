@@ -5,7 +5,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 echo "Updating the system..."
-sudo apt update && sudo apt upgrade
+sudo apt update -y && sudo apt upgrade -y
 echo "Installing features..."
 sudo apt -y install ca-certificates wget net-tools gnupg
 sudo wget https://as-repository.openvpn.net/as-repo-public.asc -qO /etc/apt/trusted.gpg.d/as-repository.asc
